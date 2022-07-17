@@ -6,9 +6,9 @@ With this post, I'd like to share my learning on how to connect to your AWS EC2 
 Though, there are several articles describing the steps, I'd like to share mine what I experienced during the task. 
 
 This experience arose from the exercise that I was about to execute for installing gitlab-runner rpm on AWS EC2 instance running with AWS AMI.
-During the creation of the EC2 instance, I generated the keypair with the .pem extension whhich is to be used with Open SSH. There is already an option to generate the keypair with .ppk extension which is compatible to use with Putty, However, I chose the default option i.e. .pem
+During the creation of the EC2 instance, I generated the keypair with the .pem extension whhich is to be used with Open SSH. There is already an option to generate the keypair with .ppk extension which is compatible to use with Putty. However, I chose the default option i.e. .pem
 
-Once the EC2 instance came up, I tried connecting to EC2 instance using SSH client i.e. Putty installed on my Windows machine.However, when I configured the SSH connection in Putty with the key (.pem) download from AWS, it didn't work and prompted me to use a key with .ppk extension.
+Once the EC2 instance came up, I tried connecting to EC2 instance using SSH client i.e. Putty installed on my Windows machine. However, when I configured the SSH connection in Putty with the key (.pem) download from AWS, it didn't work and prompted me to use a key with .ppk extension.
 
 I didn't want to generate another keypair for my EC2 instance, hence I looked through the process to use the same .pem keypair to connect to the EC2 instance, which involved generating .ppk keypair using PuTTygen.
 
@@ -51,8 +51,8 @@ Network Settings
 ```
 ![network-settings](images/03-connect-ec2-vm-using-putty/example-vm-3.png)
 
-Once all the settings of EC2 instace are finalizedd, click on Launch Instance. You can check the status by navigating to EC2 --> Instances
-Once the EC2 instane is UP and running, it will be shown as below.
+Once all the settings of EC2 instance are finalized, click on Launch Instance. You can check the status by navigating to EC2 --> Instances
+Once the EC2 instance is UP and running, it will be shown as below.
 
 ```
 Instances
